@@ -3,44 +3,23 @@
 import { motion } from "framer-motion";
 import { fadeUp, stagger } from "@/lib/animations";
 import { ChevronDown } from "lucide-react";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
     <section id="hero" className="relative min-h-screen flex flex-col justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-dark-bg" />
+        <Image
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80"
+          alt="Premium architecture and design"
+          fill
+          className="object-cover brightness-[0.35]"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-dark-bg/20 via-dark-bg/50 to-dark-bg" />
         <div className="absolute inset-0 blueprint-grid opacity-10" />
-      </div>
-
-      {/* Neon Teal Curve Design */}
-      <div className="absolute top-20 right-0 w-full h-1/3 pointer-events-none z-5 overflow-hidden">
-        <svg
-          className="absolute top-0 right-0 w-full h-full"
-          viewBox="0 0 1440 250"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="xMaxYMin meet"
-        >
-          {/* Main flowing curve - thinner and more elegant */}
-          <path
-            d="M -200 80 Q 500 30, 900 50 T 1700 130"
-            stroke="#148F77"
-            strokeWidth="35"
-            strokeLinecap="round"
-            opacity="0.8"
-            filter="drop-shadow(0 0 15px rgba(20, 143, 119, 0.6))"
-          />
-          {/* Subtle secondary curve */}
-          <path
-            d="M -200 120 Q 500 70, 900 90 T 1700 180"
-            stroke="#148F77"
-            strokeWidth="25"
-            strokeLinecap="round"
-            opacity="0.4"
-            filter="drop-shadow(0 0 20px rgba(20, 143, 119, 0.4))"
-          />
-        </svg>
       </div>
 
       {/* Content */}
