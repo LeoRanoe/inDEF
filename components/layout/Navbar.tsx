@@ -65,38 +65,54 @@ export default function Navbar() {
         {/* Mobile Hamburger */}
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild className="md:hidden">
-            <button aria-label="Open menu" className="text-on-surface">
+            <button aria-label="Open menu" className="text-on-surface hover:text-gold transition-colors">
               <Menu size={24} />
             </button>
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="bg-dark-bg border-l border-steel/20 w-72"
+            className="bg-gradient-to-b from-dark-bg to-surface-low border-0 w-64 p-0 flex flex-col"
           >
-            <div className="flex flex-col gap-6 mt-12">
-              <div className="flex flex-col leading-none mb-8">
-                <span className="font-headline text-3xl font-bold tracking-tight">
+            {/* Top logo area */}
+            <div className="border-b border-steel/20 px-6 py-6">
+              <button
+                onClick={() => setOpen(false)}
+                className="absolute right-6 top-4 text-muted hover:text-on-surface transition-colors"
+                aria-label="Close menu"
+              >
+                ✕
+              </button>
+              <Link href="#hero" onClick={() => setOpen(false)} className="flex flex-col leading-none">
+                <span className="font-headline text-2xl font-bold tracking-tight">
                   <span className="text-teal">in</span>
                   <span className="text-gold">DEF</span>
                 </span>
-                <span className="font-label text-[10px] tracking-[0.25em] uppercase text-muted">
+                <span className="font-label text-[8px] tracking-[0.25em] uppercase text-muted">
                   Design & Construction
                 </span>
-              </div>
+              </Link>
+            </div>
+
+            {/* Navigation links */}
+            <nav className="flex-1 px-6 py-8 flex flex-col gap-1">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="font-label uppercase tracking-[0.2em] text-sm text-muted hover:text-on-surface transition-colors duration-300 py-2 border-b border-steel/10"
+                  className="font-label uppercase tracking-[0.15em] text-xs text-muted hover:text-gold transition-colors duration-200 py-3 px-4 rounded-sm hover:bg-steel/10"
                 >
                   {link.label}
                 </a>
               ))}
+            </nav>
+
+            {/* CTA Button */}
+            <div className="border-t border-steel/20 px-6 py-6">
               <a
                 href="#contact"
                 onClick={() => setOpen(false)}
-                className="font-label uppercase tracking-[0.2em] text-sm bg-gold/90 text-dark-bg px-6 py-3 text-center hover:bg-gold transition-colors duration-300 font-semibold mt-4"
+                className="flex items-center justify-center font-label uppercase tracking-[0.2em] text-xs bg-gold text-dark-bg px-6 py-4 text-center hover:bg-gold/90 transition-colors duration-200 font-semibold rounded-sm"
               >
                 Start Your Project
               </a>
