@@ -65,7 +65,7 @@ export default function AboutSection() {
                 </h3>
               </div>
               <p className="text-on-surface text-lg leading-relaxed font-body font-light">
-                To make building your dream space simple, clear, and rewarding. Combining innovative design, precision execution, and a process that lets you see and love your project before it's built.
+                To make building your dream space simple, clear, and rewarding. Combining innovative design, precision execution, and a process that lets you see and love your project before it&apos;s built.
               </p>
             </div>
           </motion.div>

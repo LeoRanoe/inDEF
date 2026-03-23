@@ -3,32 +3,32 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { fadeUp, stagger } from "@/lib/animations";
-import { Ruler, Eye, HardHat, ShieldCheck } from "lucide-react";
+import { Ruler, Eye, HardHat, Briefcase } from "lucide-react";
 
 const services = [
   {
     icon: Ruler,
     title: "Architectural Design",
-    description: "3D models from day one. Bespoke blueprints for high-end residential and commercial estates.",
-    tag: "01 / CONCEPTUAL",
-  },
-  {
-    icon: Eye,
-    title: "3D Visualization",
-    description: "Photorealistic immersive environments and virtual walkthroughs that bring your vision to life.",
-    tag: "02 / RENDERING",
+    description: "Bespoke, innovative designs tailored to your needs, ambitions, and environment.",
+    tag: "01 / DESIGN",
   },
   {
     icon: HardHat,
     title: "Construction & Execution",
-    description: "Turnkey project management with absolute adherence to spec. Built with precision and durability.",
-    tag: "03 / EXECUTION",
+    description: "High-quality building services delivered with precision, reliability, and attention to details.",
+    tag: "02 / EXECUTION",
   },
   {
-    icon: ShieldCheck,
-    title: "Technical Audit",
-    description: "Structural integrity assessments and material lifecycle analysis for lasting value.",
-    tag: "04 / ANALYSIS",
+    icon: Briefcase,
+    title: "Project Management",
+    description: "End-to-end project leadership ensuring smooth coordination, cost-efficiency, and timely delivery.",
+    tag: "03 / MANAGEMENT",
+  },
+  {
+    icon: Eye,
+    title: "Consultancy",
+    description: "Expert advice on design, planning, and sustainable building practices.",
+    tag: "04 / CONSULTATION",
   },
 ];
 
