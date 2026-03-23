@@ -17,8 +17,10 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -31,6 +33,7 @@ export default function Navbar() {
           ? "bg-dark-bg/95 border-b border-white/5"
           : "bg-gradient-to-b from-dark-bg/60 to-transparent border-b border-transparent"
       }`}
+      suppressHydrationWarning
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
@@ -41,6 +44,8 @@ export default function Navbar() {
             width={52}
             height={57}
             priority
+            quality={95}
+            sizes="(max-width: 768px) 52px, 52px"
             className="h-14 w-auto object-contain"
           />
         </Link>
@@ -90,6 +95,9 @@ export default function Navbar() {
                   alt="inDEF Design & Construction N.V."
                   width={52}
                   height={57}
+                  priority
+                  quality={95}
+                  sizes="52px"
                   className="h-14 w-auto object-contain"
                 />
               </Link>
