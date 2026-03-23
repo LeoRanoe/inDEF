@@ -58,19 +58,24 @@ export default function Footer() {
                 href="tel:+597874302"
                 className="text-muted hover:text-steel transition-colors"
               >
-                +597 874 3028
+                    <p>+597 847 4488</p>
+              </a>
+                 <a
+                href="tel:+597874302"
+                className="text-muted hover:text-steel transition-colors"
+              >
+                    <p>+597 827 9940</p>
               </a>
               <a
                 href="mailto:devane.tirtosemito@indefdesign.com"
                 className="text-muted hover:text-steel transition-colors"
               >
-                devane.tirtosemito@indefdesign.com
+                info@indefdesign.com
               </a>
               <a
                 href="mailto:devtirto@gmail.com"
                 className="text-muted hover:text-steel transition-colors"
               >
-                devtirto@gmail.com
               </a>
             </div>
           </div>

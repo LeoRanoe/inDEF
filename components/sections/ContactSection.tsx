@@ -79,7 +79,8 @@ export default function ContactSection() {
                     href="tel:+597874302"
                     className="text-on-surface hover:text-steel transition-colors font-body"
                   >
-                    <p className="text-on-surface font-body">+597 874 3028</p>
+                    <p className="text-on-surface font-body">+597 847 4488</p>
+                    <p className="text-on-surface font-body">+597 827 9940</p>
                   </a>
                 </div>
               </div>
@@ -94,14 +95,13 @@ export default function ContactSection() {
                     href="mailto:devane.tirtosemito@indefdesign.com"
                     className="text-on-surface hover:text-steel transition-colors font-body"
                   >
-                    devane.tirtosemito@indefdesign.com
+                    info@indefdesign.com
                   </a>
                   <p className="text-on-surface text-sm mt-1 font-body">
                     <a
                       href="mailto:devtirto@gmail.com"
                       className="hover:text-steel transition-colors"
                     >
-                      devtirto@gmail.com
                     </a>
                   </p>
                 </div>
