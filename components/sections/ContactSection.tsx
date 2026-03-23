@@ -75,9 +75,12 @@ export default function ContactSection() {
                   <p className="font-label text-[10px] text-muted/60 tracking-[0.3em] uppercase mb-1">
                     Phone
                   </p>
-                  <p className="text-on-surface font-body">+597 874 3028</p>
-                  <p className="text-on-surface font-body">+597 847-4488</p>
-                  <p className="text-on-surface font-body">+597 827-9940</p>
+                  <a
+                    href="tel:+597874302"
+                    className="text-on-surface hover:text-steel transition-colors font-body"
+                  >
+                    <p className="text-on-surface font-body">+597 874 3028</p>
+                  </a>
                 </div>
               </div>
 
@@ -88,11 +91,19 @@ export default function ContactSection() {
                     Email
                   </p>
                   <a
-                    href="mailto:info@indefdesign.com"
+                    href="mailto:devane.tirtosemito@indefdesign.com"
                     className="text-on-surface hover:text-steel transition-colors font-body"
                   >
-                    info@indefdesign.com
+                    devane.tirtosemito@indefdesign.com
                   </a>
+                  <p className="text-on-surface text-sm mt-1 font-body">
+                    <a
+                      href="mailto:devtirto@gmail.com"
+                      className="hover:text-steel transition-colors"
+                    >
+                      devtirto@gmail.com
+                    </a>
+                  </p>
                 </div>
               </div>
 
@@ -103,11 +114,13 @@ export default function ContactSection() {
                     Address
                   </p>
                   <p className="text-on-surface font-body">
-                    De Crane Weg #70, Wanica
+                    De Crane Weg #70<br />
+                    Wanica
                   </p>
-                  <p className="text-on-surface font-body">Suriname</p>
                 </div>
               </div>
+
+
             </div>
           </motion.div>
 

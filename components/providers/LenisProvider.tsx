@@ -16,9 +16,21 @@ export default function LenisProvider({ children }: { children: React.ReactNode 
     });
     lenisRef.current = lenis;
 
+    // Intercept all anchor clicks so Lenis handles smooth scrolling to sections
+    const handleAnchorClick = (e: MouseEvent) => {
+      const anchor = (e.target as HTMLElement).closest('a[href^="#"]') as HTMLAnchorElement | null;
+      if (!anchor) return;
+      const href = anchor.getAttribute("href");
+      if (!href || href === "#") return;
+      const target = document.querySelector(href);
+      if (!target) return;
+      e.preventDefault();
+      lenis.scrollTo(target as HTMLElement, { duration: 1.0, offset: -80 });
+    };
+    document.addEventListener("click", handleAnchorClick);
+
     let lastTime = 0;
     function raf(time: number) {
-      // Skip frames where time hasn't meaningfully advanced (avoids burst repaints)
       if (time - lastTime > 4) {
         lenis.raf(time);
         lastTime = time;
@@ -29,6 +41,7 @@ export default function LenisProvider({ children }: { children: React.ReactNode 
 
     return () => {
       cancelAnimationFrame(rafIdRef.current);
+      document.removeEventListener("click", handleAnchorClick);
       lenis.destroy();
     };
   }, []);

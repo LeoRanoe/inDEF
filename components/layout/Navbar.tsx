@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
@@ -33,14 +34,15 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <Link href="#hero" className="flex flex-col leading-none">
-          <span className="font-headline text-2xl font-bold tracking-tight">
-            <span className="text-teal">in</span>
-            <span className="text-gold">DEF</span>
-          </span>
-          <span className="font-label text-[9px] tracking-[0.25em] uppercase text-muted">
-            Design & Construction
-          </span>
+        <Link href="#hero" className="flex items-center">
+          <Image
+            src="/images/logo.png"
+            alt="inDEF Design & Construction — Luxury Architecture Suriname"
+            width={52}
+            height={57}
+            priority
+            className="h-14 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -82,14 +84,14 @@ export default function Navbar() {
               >
                 ✕
               </button>
-              <Link href="#hero" onClick={() => setOpen(false)} className="flex flex-col leading-none">
-                <span className="font-headline text-2xl font-bold tracking-tight">
-                  <span className="text-teal">in</span>
-                  <span className="text-gold">DEF</span>
-                </span>
-                <span className="font-label text-[8px] tracking-[0.25em] uppercase text-muted">
-                  Design & Construction
-                </span>
+              <Link href="#hero" onClick={() => setOpen(false)} className="flex items-center">
+                <Image
+                  src="/images/logo.png"
+                  alt="inDEF Design & Construction"
+                  width={52}
+                  height={57}
+                  className="h-14 w-auto object-contain"
+                />
               </Link>
             </div>
 

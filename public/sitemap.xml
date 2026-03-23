@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.indefdesign.com/</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.indefdesign.com/projects/project-2/p2-exterior-side.jpg</image:loc>
+      <image:title>Oasis Residences — contemporary two-storey estate, inDEF Design &amp; Construction Suriname</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.indefdesign.com/projects/project-1/p1-overview.jpg</image:loc>
+      <image:title>Indigo Living Lofts — double-height open-plan luxury interior, inDEF Design &amp; Construction</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.indefdesign.com/projects/project-2/p2-exterior-front.jpg</image:loc>
+      <image:title>Oasis Residences — modern gated estate front view, inDEF Design &amp; Construction</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.indefdesign.com/projects/project-1/p1-kitchen-dining.jpg</image:loc>
+      <image:title>Indigo Living Lofts — navy blue kitchen cabinetry with floating staircase, inDEF Design &amp; Construction</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.indefdesign.com/projects/project-2/p2-dining.jpg</image:loc>
+      <image:title>Oasis Residences — open-plan dining and kitchen area, inDEF Design &amp; Construction</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.indefdesign.com/projects/project-2/p2-bedroom.jpg</image:loc>
+      <image:title>Oasis Residences — luxury master bedroom suite, inDEF Design &amp; Construction</image:title>
+    </image:image>
+  </url>
+</urlset>

@@ -1,80 +1,19 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
+import Link from "next/link";
 import { fadeUp, stagger } from "@/lib/animations";
-
-type Category = "All" | "Residential" | "Commercial" | "Renovation";
-
-interface Project {
-  title: string;
-  category: Category;
-  image: string;
-  span: string;
-  aspect: string;
-}
-
-const projects: Project[] = [
-  {
-    title: "The Obsidian Pavilion",
-    category: "Residential",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80",
-    span: "md:col-span-2",
-    aspect: "aspect-[16/10]",
-  },
-  {
-    title: "Vertex Studio Hub",
-    category: "Commercial",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
-    span: "md:col-span-1",
-    aspect: "aspect-square",
-  },
-  {
-    title: "Paramaribo Residence",
-    category: "Residential",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
-    span: "md:col-span-1",
-    aspect: "aspect-square",
-  },
-  {
-    title: "Horizon Office Tower",
-    category: "Commercial",
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
-    span: "md:col-span-1",
-    aspect: "aspect-[3/4]",
-  },
-  {
-    title: "Heritage Renewal",
-    category: "Renovation",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
-    span: "md:col-span-2",
-    aspect: "aspect-[16/10]",
-  },
-  {
-    title: "Riverfront Lofts",
-    category: "Renovation",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
-    span: "md:col-span-1",
-    aspect: "aspect-[3/4]",
-  },
-];
-
-const categories: Category[] = ["All", "Residential", "Commercial", "Renovation"];
+import { allProjects } from "@/lib/projects";
 
 export default function ProjectsSection() {
-  const [activeCategory, setActiveCategory] = useState<Category>("All");
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
-
-  const filtered =
-    activeCategory === "All"
-      ? projects
-      : projects.filter((p) => p.category === activeCategory);
 
   return (
     <section id="projects" className="py-24 md:py-40 bg-dark-bg">
       <div ref={ref} className="max-w-7xl mx-auto px-6">
+        {/* Heading */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -85,67 +24,82 @@ export default function ProjectsSection() {
             Selected{" "}
             <span className="italic text-steel">Projects</span>
           </h2>
-
-          {/* Filter Tabs */}
-          <div className="flex gap-4 flex-wrap">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`font-label text-xs tracking-[0.2em] uppercase px-4 py-2 transition-[color,background-color,border-color] duration-200 ${
-                  activeCategory === cat
-                    ? "bg-steel text-white"
-                    : "text-muted hover:text-on-surface border border-steel/20 hover:border-steel/50"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
+          <p className="font-label text-xs tracking-[0.2em] uppercase text-muted">
+            {allProjects.length} projects
+          </p>
         </motion.div>
 
-        {/* Projects Grid */}
+        {/* Project Cards */}
         <motion.div
           variants={stagger}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-3 gap-4"
+          className="grid grid-cols-1 md:grid-cols-2 gap-4"
         >
-          <AnimatePresence mode="sync">
-            {filtered.map((project) => (
-              <motion.div
-                key={project.title}
-                variants={fadeUp}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.25 }}
-                className={`relative group cursor-pointer overflow-hidden ${project.span} ${project.aspect}`}
+          {allProjects.map((project, i) => (
+            <motion.div key={project.slug} variants={fadeUp}>
+              <Link
+                href={`/projects/${project.slug}`}
+                className="group relative block overflow-hidden aspect-[4/3]"
+                aria-label={`View ${project.title}`}
               >
                 <Image
-                  src={project.image}
-                  alt={project.title}
+                  src={project.heroImage}
+                  alt={project.heroAlt}
                   fill
-                  loading="lazy"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  loading={i === 0 ? "eager" : "lazy"}
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
 
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-dark-bg/75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                  <span className="font-label text-steel tracking-[0.4em] text-[10px] uppercase mb-2">
-                    {project.category}
-                  </span>
-                  <h4 className="font-headline text-3xl md:text-4xl font-light text-on-surface mb-4">
+                {/* Always-visible bottom strip */}
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-dark-bg/90 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                  <div className="flex gap-2 mb-3 flex-wrap">
+                    {project.categories.map((cat) => (
+                      <span
+                        key={cat}
+                        className="font-label text-[9px] tracking-[0.3em] uppercase text-steel border border-steel/40 px-2 py-0.5"
+                      >
+                        {cat}
+                      </span>
+                    ))}
+                  </div>
+                  <h3 className="font-headline text-2xl md:text-3xl font-light text-on-surface">
                     {project.title}
-                  </h4>
-                  <span className="font-label tracking-[0.3em] text-xs text-on-surface border-b border-steel pb-1 inline-block w-fit hover:text-steel transition-colors">
-                    VIEW ARCHIVE
-                  </span>
+                  </h3>
                 </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
+
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-dark-bg/75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 md:p-8">
+                  <div className="flex gap-2 mb-3 flex-wrap">
+                    {project.categories.map((cat) => (
+                      <span
+                        key={cat}
+                        className="font-label text-[9px] tracking-[0.3em] uppercase text-steel border border-steel/40 px-2 py-0.5"
+                      >
+                        {cat}
+                      </span>
+                    ))}
+                  </div>
+                  <h3 className="font-headline text-2xl md:text-3xl font-light text-on-surface mb-3">
+                    {project.title}
+                  </h3>
+                  <p className="font-body text-muted text-xs leading-relaxed mb-5 max-w-sm hidden md:block">
+                    {project.description.slice(0, 120)}…
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="font-label tracking-[0.3em] text-xs text-on-surface border-b border-steel pb-0.5 inline-block">
+                      VIEW PROJECT
+                    </span>
+                    <span className="font-label text-[10px] tracking-[0.2em] uppercase text-muted">
+                      {project.images.length} images
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>
