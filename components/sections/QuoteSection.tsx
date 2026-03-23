@@ -19,9 +19,9 @@ export default function QuoteSection() {
         className="max-w-5xl mx-auto px-6 text-center relative z-10"
       >
         <blockquote className="font-headline text-3xl md:text-5xl lg:text-7xl italic text-on-surface leading-[1.15] mb-12 font-light">
-          &ldquo;Precision is not about perfection, but about the{" "}
-          <span className="text-gold italic">harmony</span> between technical
-          constraints and human aspiration.&rdquo;
+          &ldquo;Precision is not about perfection, it&apos;s about creating
+          solutions where <span className="text-gold italic">technical excellence</span> meets
+          human needs.&rdquo;
         </blockquote>
 
         <div className="w-16 h-[1px] bg-gold mx-auto mb-8" />

@@ -2,15 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import CountUp from "react-countup";
 import { fadeUp, stagger } from "@/lib/animations";
-
-const stats = [
-  { value: 50, suffix: "+", label: "Projects" },
-  { value: 100, suffix: "%", label: "3D First" },
-  { value: 10, suffix: "+", label: "Years" },
-  { value: 1, suffix: "", label: "Trusted in Suriname" },
-];
 
 export default function AboutSection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
@@ -58,37 +50,6 @@ export default function AboutSection() {
               <div className="h-[2px] w-10 bg-gold mt-8" />
             </div>
           </motion.div>
-        </motion.div>
-
-        {/* Stats */}
-        <motion.div
-          variants={stagger}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-16 border-t border-steel/10"
-        >
-          {stats.map((stat) => (
-            <motion.div
-              key={stat.label}
-              variants={fadeUp}
-              className="text-center"
-            >
-              <div className="font-headline text-4xl md:text-5xl text-on-surface font-light mb-2">
-                {inView && (
-                  <CountUp
-                    end={stat.value}
-                    duration={2.5}
-                    suffix={stat.suffix}
-                    enableScrollSpy
-                    scrollSpyOnce
-                  />
-                )}
-              </div>
-              <p className="font-label text-xs tracking-[0.2em] uppercase text-muted">
-                {stat.label}
-              </p>
-            </motion.div>
-          ))}
         </motion.div>
       </div>
     </section>

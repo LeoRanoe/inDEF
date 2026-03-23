@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import { fadeUp, stagger } from "@/lib/animations";
-import { Box, Leaf, Target } from "lucide-react";
+import { Box, Leaf } from "lucide-react";
 
 const features = [
   {
@@ -20,13 +20,6 @@ const features = [
     title: "Material Intelligence",
     description:
       "Sourcing the world's most sustainable and durable construction materials through verified global networks.",
-  },
-  {
-    icon: Target,
-    number: "03",
-    title: "Zero-Margin Tolerance",
-    description:
-      "Engineering solutions that meet the strictest performance requirements for lasting generational value.",
   },
 ];
 
