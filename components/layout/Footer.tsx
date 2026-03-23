@@ -19,7 +19,7 @@ export default function Footer() {
             <Link href="#hero" className="flex items-center mb-4">
               <Image
                 src="/images/logo.png"
-                alt="inDEF Design & Construction — Luxury Architecture Suriname"
+                alt="inDEF Design & Construction N.V. — Luxury Architecture Suriname"
                 width={64}
                 height={70}
                 className="h-16 w-auto object-contain"

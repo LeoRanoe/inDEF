@@ -71,7 +71,7 @@ export default function ContactEmailTemplate(data: ContactData) {
         </div>
 
         <p style={{ color: "#999", fontSize: "12px", marginTop: "30px" }}>
-          This email was sent from your inDEF Design & Construction website contact form.
+          This email was sent from your inDEF Design & Construction N.V. website contact form.
         </p>
       </div>
     </div>

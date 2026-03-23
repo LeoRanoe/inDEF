@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: "inDEF Design & Construction N.V. | Luxury Architecture Suriname",
-    template: "%s | inDEF Design & Construction",
+    template: "%s | inDEF Design & Construction N.V.",
   },
   description:
     "Premier architectural design and construction firm in Suriname. We create bespoke luxury residences and commercial estates with photorealistic 3D visualization — from dream to reality, stress-free.",
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
         url: "/images/og-image.jpg",
         width: 1366,
         height: 768,
-        alt: "Oasis Residences — luxury contemporary estate designed and built by inDEF Design & Construction Suriname",
+        alt: "Oasis Residences — luxury contemporary estate designed and built by inDEF Design & Construction N.V. Suriname",
       },
     ],
   },

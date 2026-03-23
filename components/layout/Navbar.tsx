@@ -37,7 +37,7 @@ export default function Navbar() {
         <Link href="#hero" className="flex items-center">
           <Image
             src="/images/logo.png"
-            alt="inDEF Design & Construction — Luxury Architecture Suriname"
+            alt="inDEF Design & Construction N.V. — Luxury Architecture Suriname"
             width={52}
             height={57}
             priority
@@ -87,7 +87,7 @@ export default function Navbar() {
               <Link href="#hero" onClick={() => setOpen(false)} className="flex items-center">
                 <Image
                   src="/images/logo.png"
-                  alt="inDEF Design & Construction"
+                  alt="inDEF Design & Construction N.V."
                   width={52}
                   height={57}
                   className="h-14 w-auto object-contain"
