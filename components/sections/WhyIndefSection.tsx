@@ -1,25 +1,23 @@
-"use client";
-
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import { fadeUp, stagger } from "@/lib/animations";
-import { Box, Leaf } from "lucide-react";
 
-const features = [
+const reasons = [
   {
-    icon: Box,
-    number: "01",
-    title: "Digital Twin Modelling",
+    title: "See Before You Decide",
     description:
-      "We create a digital twin of your space prior to demolition construction — simulating lighting, physics, and load before a single brick is laid.",
+      "Because with us, you don't have to guess what you're getting. Before we build anything, we help you see your space clearly, so you can make decisions with confidence, not uncertainty.",
   },
   {
-    icon: Leaf,
-    number: "02",
-    title: "Material Intelligence",
+    title: "Fewer Surprises, More Peace",
     description:
-      "Sourcing the world's most sustainable and durable construction materials through verified global networks.",
+      "That means fewer surprises, less stress, and a result that actually matches what you had in mind. We don't just focus on the final outcome — we make sure the entire process feels clear, smooth, and well-managed from start to finish.",
+  },
+  {
+    title: "Your Partner, Not Just a Contractor",
+    description:
+      "At inDEF, you're not just hiring a contractor. You're working with a partner who guides you from idea to reality, without the headaches.",
   },
 ];
 
@@ -46,33 +44,23 @@ export default function WhyIndefSection() {
               variants={stagger}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
-              className="space-y-10"
+              className="space-y-8"
             >
-              {features.map((feature) => {
-                const Icon = feature.icon;
-                return (
-                  <motion.div
-                    key={feature.title}
-                    variants={fadeUp}
-                    className="flex gap-5"
-                  >
-                    <div className="flex flex-col items-center gap-2 shrink-0">
-                      <Icon className="text-steel" size={24} strokeWidth={1.5} />
-                      <span className="font-label text-steel text-sm tracking-[0.2em]">
-                        {feature.number}
-                      </span>
-                    </div>
-                    <div>
-                      <h4 className="font-headline text-xl text-on-surface mb-2 font-light">
-                        {feature.title}
-                      </h4>
-                      <p className="text-sm text-muted font-body font-light leading-relaxed">
-                        {feature.description}
-                      </p>
-                    </div>
-                  </motion.div>
-                );
-              })}
+              {reasons.map((reason) => (
+                <motion.div
+                  key={reason.title}
+                  variants={fadeUp}
+                  className="group"
+                >
+                  <h4 className="font-headline text-2xl text-on-surface mb-3 font-light group-hover:text-teal transition-colors">
+                    {reason.title}
+                  </h4>
+                  <p className="text-base text-muted font-body font-light leading-relaxed">
+                    {reason.description}
+                  </p>
+                  <div className="h-1 w-0 bg-gradient-to-r from-teal to-transparent mt-4 group-hover:w-12 transition-[width] duration-300" />
+                </motion.div>
+              ))}
             </motion.div>
           </div>
 
