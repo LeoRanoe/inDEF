@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import logo from "@/public/images/logo.png";
 
 const navLinks = [
   { label: "Home", href: "#hero" },
@@ -37,13 +38,9 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="#hero" className="flex items-center">
           <Image
-            src="/images/logo.png"
+            src={logo}
             alt="inDEF Design & Construction N.V. — Luxury Architecture Suriname"
-            width={52}
-            height={57}
             priority
-            quality={95}
-            sizes="(max-width: 768px) 52px, 52px"
             className="h-14 w-auto object-contain"
           />
         </Link>
@@ -89,13 +86,9 @@ export default function Navbar() {
               </button>
               <Link href="#hero" onClick={() => setOpen(false)} className="flex items-center">
                 <Image
-                  src="/images/logo.png"
+                  src={logo}
                   alt="inDEF Design & Construction N.V."
-                  width={52}
-                  height={57}
                   priority
-                  quality={95}
-                  sizes="52px"
                   className="h-14 w-auto object-contain"
                 />
               </Link>
