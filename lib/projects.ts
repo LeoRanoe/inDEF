@@ -33,8 +33,8 @@ export const allProjects: ProjectData[] = [
     images: [
       {
         src: "/projects/project-1/p1-overview.jpg",
-        alt: "Double-height open-plan living space with floating staircase and hardwood floors",
-        caption: "Living Room Overview",
+        alt: "Exterior house overview with driveway and tropical landscaping",
+        caption: "Exterior Overview",
       },
       {
         src: "/projects/project-1/p1-kitchen-dining.jpg",
@@ -48,8 +48,8 @@ export const allProjects: ProjectData[] = [
       },
       {
         src: "/projects/project-1/p1-staircase.jpg",
-        alt: "Floating staircase with wood treads and steel balustrade, double-height void",
-        caption: "Staircase Detail",
+        alt: "Exterior house detail with gates and tropical landscaping",
+        caption: "Exterior Detail",
       },
     ],
   },
