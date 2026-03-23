@@ -59,9 +59,9 @@ export const allProjects: ProjectData[] = [
     categories: ["Architecture", "Interior Design"],
     heroImage: "/projects/project-2/p2-exterior-front.jpg",
     heroAlt:
-      "Oasis Residences — modern two-storey estate with flat roof, gated entrance, and tropical landscaping in Suriname",
+      "Oasis Residences — modern two-storey residence with horizontal volumes, double garage, and lush tropical setting",
     description:
-      "Clean flat-roof volumes wrapped in refined stucco facade, framed by curated tropical landscaping. An elegant gated entrance and paver driveway set the tone for the premium lifestyle within. Interiors balance a soft palette of warm greys and natural stone with dramatic master suites — every detail engineered for life in Suriname.",
+      "A striking contemporary residence featuring clean horizontal lines with a white and sage-green facade. The design showcases cantilevered overhangs and expansive floor-to-ceiling glazing that seamlessly connects interior living spaces with tropical landscaping. The interior design features an open-plan dining and kitchen area with a waterfall island, a dramatic double-height staircase with floating wood treads and steel balustrades, and a sophisticated master suite with a dramatic slate-blue ceiling and custom cabinetry.",
     year: "2026",
     location: "Suriname",
     scope: "Architecture & Interior Design",
@@ -83,18 +83,18 @@ export const allProjects: ProjectData[] = [
       },
       {
         src: "/projects/project-2/p2-staircase-hall.jpg",
-        alt: "Double-height staircase hall with wood treads, steel balustrade, and living area below",
-        caption: "Staircase Hall",
+        alt: "Master bedroom with wood sliding door, tall windows, and modern furnishings",
+        caption: "Master Bedroom",
       },
       {
         src: "/projects/project-2/p2-living.jpg",
-        alt: "Living room with floor-to-ceiling windows, floating staircase, and wood feature wall",
-        caption: "Living Room",
+        alt: "Double-height staircase with wood treads, steel balustrade, and wood feature wall",
+        caption: "Staircase Wall",
       },
       {
         src: "/projects/project-2/p2-bedroom.jpg",
-        alt: "Master bedroom with bespoke channeled headboard, barn-door wardrobe system, and slate-blue ceiling",
-        caption: "Master Bedroom",
+        alt: "Bright bedroom space with high ceilings, natural light, and minimalist design",
+        caption: "Living Room",
       },
     ],
   },
