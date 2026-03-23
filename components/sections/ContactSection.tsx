@@ -107,18 +107,7 @@ export default function ContactSection() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <MapPin className="text-steel shrink-0 mt-1" size={18} strokeWidth={1.5} />
-                <div>
-                  <p className="font-label text-[10px] text-muted/60 tracking-[0.3em] uppercase mb-1">
-                    Address
-                  </p>
-                  <p className="text-on-surface font-body">
-                    De Crane Weg #70<br />
-                    Wanica
-                  </p>
-                </div>
-              </div>
+
 
 
             </div>

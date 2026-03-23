@@ -116,13 +116,7 @@ const organizationSchema = {
     url: `${siteUrl}/images/logo.png`,
   },
   image: `${siteUrl}/images/og-image.jpg`,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "De Crane Weg #70",
-    addressLocality: "Wanica",
-    addressRegion: "Wanica",
-    addressCountry: "SR",
-  },
+
   areaServed: {
     "@type": "Country",
     name: "Suriname",
