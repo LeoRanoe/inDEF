@@ -31,7 +31,13 @@ const siteUrl = "https://www.indefdesign.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   icons: {
-    icon: "/images/logo.png",
+    icon: [
+      {
+        url: "/images/logo.png",
+        type: "image/png",
+      },
+    ],
+    apple: "/images/logo.png",
   },
   title: {
     default: "inDEF Design & Construction N.V. | Luxury Architecture Suriname",
