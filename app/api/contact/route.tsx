@@ -12,7 +12,9 @@ const contactSchema = z.object({
   message: z.string().min(10),
 });
 
-function renderBusinessEmail(data: any): string {
+type ContactData = z.infer<typeof contactSchema>;
+
+function renderBusinessEmail(data: ContactData): string {
   return `
 <!DOCTYPE html>
 <html>
@@ -129,14 +131,4 @@ export async function POST(request: Request) {
       { status: 500 }
     );
   }
-}
-
-function ContactConfirmationTemplate(name: string) {
-  return (
-    <div style={{ fontFamily: "Arial, sans-serif", padding: "20px" }}>
-      <h2>Thank you, {name}!</h2>
-      <p>We received your inquiry and will get back to you soon.</p>
-      <p>Best regards,<br />inDEF Design & Construction N.V.</p>
-    </div>
-  );
 }

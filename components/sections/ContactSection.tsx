@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactSchema, type ContactFormData } from "@/lib/validations";
 import { fadeUp, stagger } from "@/lib/animations";
-import { Phone, Mail, MapPin, User } from "lucide-react";
+import { Phone, Mail, User } from "lucide-react";
 import { toast } from "sonner";
 
 export default function ContactSection() {
