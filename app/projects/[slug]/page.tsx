@@ -120,6 +120,30 @@ export default function ProjectPage({
           </div>
         </div>
 
+        {/* Video Walkthrough */}
+        {project.video && (
+          <div className="mb-20">
+            <div className="mb-8">
+              <span className="font-label text-[10px] tracking-[0.3em] uppercase text-steel block mb-2">
+                Walkthrough
+              </span>
+              <h2 className="font-headline text-3xl md:text-4xl font-light text-on-surface">
+                Project <span className="italic text-steel">Video</span>
+              </h2>
+            </div>
+            <div className="relative w-full max-w-4xl aspect-video rounded-sm bg-black overflow-hidden">
+              <video
+                controls
+                playsInline
+                className="w-full h-full object-cover"
+                poster={project.heroImage}
+              >
+                <source src={project.video} type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        )}
+
         {/* Gallery heading */}
         <div className="mb-8">
           <h2 className="font-headline text-3xl md:text-4xl font-light text-on-surface">

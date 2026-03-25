@@ -15,6 +15,7 @@ export interface ProjectData {
   location: string;
   scope: string;
   images: ProjectImage[];
+  video?: string;
 }
 
 export const allProjects: ProjectData[] = [
@@ -30,6 +31,7 @@ export const allProjects: ProjectData[] = [
     year: "2026",
     location: "Suriname",
     scope: "Interior Design",
+    video: "/projects/project-1/walkthrough.mp4",
     images: [
       {
         src: "/projects/project-1/p1-overview.jpg",

@@ -102,9 +102,6 @@ export default function AboutSection() {
           {/* Right Core Values Block */}
           <motion.div variants={fadeUp}>
             <div className="border-l-4 border-gold p-12 bg-surface-low/50 backdrop-blur-sm">
-              <h4 className="font-label text-gold tracking-[0.2em] uppercase text-xs block mb-8">
-                Core Values
-              </h4>
               <p className="font-headline text-5xl md:text-6xl italic text-on-surface leading-tight font-light mb-8">
                 Creativity
                 <span className="text-gold"> · </span>

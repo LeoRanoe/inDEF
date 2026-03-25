@@ -18,15 +18,12 @@ export default function ProjectsSection() {
           variants={fadeUp}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-6"
+          className="mb-12 md:mb-16"
         >
           <h2 className="font-headline text-4xl md:text-6xl font-light text-on-surface">
             Selected{" "}
             <span className="italic text-steel">Projects</span>
           </h2>
-          <p className="font-label text-xs tracking-[0.2em] uppercase text-muted">
-            {allProjects.length} projects
-          </p>
         </motion.div>
 
         {/* Project Cards */}
