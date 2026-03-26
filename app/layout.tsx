@@ -96,6 +96,15 @@ export const metadata: Metadata = {
       "Premier architectural design and construction firm in Suriname. From vision to reality — stress-free.",
     images: ["/images/og-image.jpg"],
   },
+  icons: {
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "inDEF Design & Construction",
+  },
   alternates: {
     canonical: siteUrl,
   },
