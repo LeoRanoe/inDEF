@@ -31,4 +31,56 @@
       <image:title>Oasis Residences — luxury master bedroom suite, inDEF Design &amp; Construction</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://www.indefdesign.com/projects/indigo-living-lofts</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.indefdesign.com/projects/project-1/p1-overview.jpg</image:loc>
+      <image:title>Indigo Living Lofts — double-height open-plan living space, inDEF Design &amp; Construction</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.indefdesign.com/projects/project-1/p1-kitchen-dining.jpg</image:loc>
+      <image:title>Indigo Living Lofts — navy blue kitchen cabinetry with floating staircase, inDEF Design &amp; Construction</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.indefdesign.com/projects/project-1/p1-living-room.jpg</image:loc>
+      <image:title>Indigo Living Lofts — open-plan living room with contemporary furnishings, inDEF Design &amp; Construction</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.indefdesign.com/projects/project-1/p1-staircase.jpg</image:loc>
+      <image:title>Indigo Living Lofts — exterior detail with gates and tropical landscaping, inDEF Design &amp; Construction</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.indefdesign.com/projects/oasis-residences</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.indefdesign.com/projects/project-2/p2-exterior-front.jpg</image:loc>
+      <image:title>Oasis Residences — modern two-storey residence front elevation, inDEF Design &amp; Construction</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.indefdesign.com/projects/project-2/p2-exterior-side.jpg</image:loc>
+      <image:title>Oasis Residences — contemporary estate side elevation, inDEF Design &amp; Construction</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.indefdesign.com/projects/project-2/p2-dining.jpg</image:loc>
+      <image:title>Oasis Residences — open-plan dining and kitchen area, inDEF Design &amp; Construction</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.indefdesign.com/projects/project-2/p2-staircase-hall.jpg</image:loc>
+      <image:title>Oasis Residences — master bedroom with modern furnishings, inDEF Design &amp; Construction</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.indefdesign.com/projects/project-2/p2-living.jpg</image:loc>
+      <image:title>Oasis Residences — double-height staircase with wood treads and steel balustrade, inDEF Design &amp; Construction</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.indefdesign.com/projects/project-2/p2-bedroom.jpg</image:loc>
+      <image:title>Oasis Residences — luxury master bedroom suite, inDEF Design &amp; Construction</image:title>
+    </image:image>
+  </url>
 </urlset>
